@@ -10,8 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var timerLabel: UILabel!
-
+    
     var timer: Timer!
     var timer_sec: Float = 0
     
@@ -33,6 +34,7 @@ class ViewController: UIViewController {
     
     //    再生ボタン
     @IBAction func startTimer(_ sender: Any) {
+    
         // 動作中のタイマーを1つに保つために、 timer が存在しない場合だけ、タイマーを生成して動作させる
         if self.timer == nil {
             self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
